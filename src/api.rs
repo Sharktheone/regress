@@ -343,7 +343,7 @@ impl<'m> FusedIterator for NamedGroups<'m> {}
 /// A Regex is the compiled version of a pattern.
 #[derive(Debug, Clone)]
 pub struct Regex {
-    cr: CompiledRegex,
+    pub cr: CompiledRegex,
 }
 
 impl From<CompiledRegex> for Regex {
