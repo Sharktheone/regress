@@ -160,28 +160,28 @@ extern crate alloc;
 pub use crate::api::*;
 
 #[macro_use]
-mod util;
+pub mod util;
 
-mod api;
-mod bytesearch;
-mod charclasses;
-mod classicalbacktrack;
-mod codepointset;
-mod cursor;
-mod emit;
-mod exec;
-mod indexing;
+pub mod api;
+pub mod bytesearch;
+pub mod charclasses;
+pub mod classicalbacktrack;
+pub mod codepointset;
+pub mod cursor;
+pub mod emit;
+pub mod exec;
+pub mod indexing;
 pub mod insn;
 pub mod ir;
-mod matchers;
-mod optimizer;
-mod parse;
-mod position;
-mod scm;
-mod startpredicate;
-mod types;
-mod unicode;
-mod unicodetables;
+pub mod matchers;
+pub mod optimizer;
+pub mod parse;
+pub mod position;
+pub mod scm;
+pub mod startpredicate;
+pub mod types;
+pub mod unicode;
+pub mod unicodetables;
 
 #[cfg(feature = "backend-pikevm")]
 mod pikevm;
