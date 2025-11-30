@@ -117,16 +117,16 @@ impl CodePointSet {
     }
 
     // Return true if the set is empty.
-    pub(crate) fn is_empty(&self) -> bool {
+    pub fn is_empty(&self) -> bool {
         self.ivs.is_empty()
     }
 
     // Return true if we contain all code points.
-    pub(crate) fn contains_all_codepoints(&self) -> bool {
+    pub fn contains_all_codepoints(&self) -> bool {
         self.ivs.len() == 1 && self.ivs[0] == Interval::new(0, CODE_POINT_MAX)
     }
 
-    pub(crate) fn contains(&self, cp: u32) -> bool {
+    pub fn contains(&self, cp: u32) -> bool {
         interval_contains(&self.ivs, cp)
     }
 
